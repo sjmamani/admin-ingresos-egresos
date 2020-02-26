@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistrarComponent } from './auth/registrar/registrar.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { dashboardRoutes } from './dashboard/dashboard.routes';
 import { AuthGuardService } from './auth/auth-guard.service';
 
 const routes: Routes = [
@@ -11,9 +9,9 @@ const routes: Routes = [
   { path: 'registrar', component: RegistrarComponent },
   {
     path: '',
-    component: DashboardComponent,
-    children: dashboardRoutes,
-    canActivate: [AuthGuardService]
+    // Le decimos a Angular que cuando llegue a esta ruta, cargue tal módulo
+    loadChildren: './ingreso-egreso/ingreso-egreso.module#IngresoEgresoModule',
+    canLoad: [AuthGuardService]
   },
   { path: '**', redirectTo: '' }
 ];

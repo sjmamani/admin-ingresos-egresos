@@ -5,6 +5,10 @@ export interface IngresoEgresoState {
   items: IngresoEgreso[];
 }
 
+export interface AppState extends AppState {
+  ingresoEgreso: IngresoEgresoState;
+}
+
 const initState: IngresoEgresoState = {
   items: []
 };
