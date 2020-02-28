@@ -32,6 +32,7 @@ import { ingresoEgresoReducer } from './ingreso-egreso.reducer';
     ChartsModule,
     SharedModule,
     DashboardRoutingModule,
+    // Lazy Load
     StoreModule.forFeature('ingresoEgreso', ingresoEgresoReducer)
   ]
 })

@@ -16,7 +16,7 @@ export class DetalleComponent implements OnInit, OnDestroy {
   subscripcion: Subscription = new Subscription();
 
   constructor(
-    private store: Store<fromIngresoEgreso.AppState>,
+    private store: Store<fromIngresoEgreso.IEState>,
     public ingresoEgresoService: IngresoEgresoService
   ) {}
 

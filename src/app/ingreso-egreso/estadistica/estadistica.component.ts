@@ -21,7 +21,7 @@ export class EstadisticaComponent implements OnInit {
   public doughnutChartLabels: string[] = ['Ingresos', 'Egresos'];
   public doughnutChartData: number[] = [];
 
-  constructor(private store: Store<fromIngresoEgreso.AppState>) {}
+  constructor(private store: Store<fromIngresoEgreso.IEState>) {}
 
   ngOnInit() {
     this.subscription = this.store

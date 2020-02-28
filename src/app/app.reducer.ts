@@ -7,6 +7,7 @@ import * as fromAuth from './auth/auth.reducer';
 export interface AppState {
   ui: fromUI.State;
   auth: fromAuth.AuthState;
+  // ingresoEgreso se va cargar de manera dinámica (lazyLoad)
   // ingresoEgreso: fromIngresoEgreso.IngresoEgresoState;
 }
 
